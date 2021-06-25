@@ -66,18 +66,7 @@
 
 @push('css')
     <style>
-        .maps-text{
-            color: #7E481C;
-            border: 2px solid #7E481C;
-        }
-
-        .maps-text:hover{
-            color: #DAA520FF;
-            border: 2px solid #DAA520FF;
-        }
-        .maps-text:after{
-            border: #7E481C;
-        }
+        .maps-text{color:#7e481c;border:2px solid #7e481c}.maps-text:hover{color:#daa520FF;border:2px solid #daa520FF}.maps-text:after{border:#7e481c}
     </style>
 @endpush
 

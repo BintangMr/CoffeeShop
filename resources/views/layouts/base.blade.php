@@ -36,44 +36,7 @@
     @yield('css')
 
     <style>
-        .scroll_to_top{
-            background-color : #7E481C;
-        }
-        .scroll_to_top:hover{
-            background-color : #DAA520FF;
-        }
-        .custom-footer{
-            color : #7E481C !important;
-        }
-        .custom-footer:hover{
-            color : #DAA520FF !important;
-        }
-
-        .post_title a:hover {
-            color : #DAA520FF !important;
-        }
-        .sc_team_item .sc_team_item_info .sc_team_item_title a:hover{
-            color : #DAA520FF !important;
-        }
-
-        .sc_testimonials.sc_slider_swiper .sc_slider_pagination_wrap .swiper-pagination-bullet-active, .sc_testimonials.sc_slider_swiper .sc_slider_pagination_wrap span:hover {
-            border-color: #DAA520FF;
-            background-color: #DAA520FF;
-        }
-        .isDisabled {
-            color: currentColor;
-            cursor: not-allowed;
-            opacity: 0.5;
-            text-decoration: none;
-        }
-
-        .sc_tabs.sc_tabs_style_2 .sc_tabs_titles li.ui-state-active a, .sc_tabs.sc_tabs_style_2 .sc_tabs_titles li.sc_tabs_active a {
-            border-color: #7E481C;
-        }
-        .sc_tabs.sc_tabs_style_2 .sc_tabs_titles li a:hover {
-            border-color: #7E481C;
-            color: #7E481C;
-        }
+        .scroll_to_top{background-color:#7e481c}.scroll_to_top:hover{background-color:#daa520FF}.custom-footer{color:#7e481c!important}.custom-footer:hover{color:#daa520FF!important}.post_title a:hover{color:#daa520FF!important}.sc_team_item .sc_team_item_info .sc_team_item_title a:hover{color:#daa520FF!important}.sc_testimonials.sc_slider_swiper .sc_slider_pagination_wrap .swiper-pagination-bullet-active,.sc_testimonials.sc_slider_swiper .sc_slider_pagination_wrap span:hover{border-color:#daa520FF;background-color:#daa520FF}.isDisabled{color:currentColor;cursor:not-allowed;opacity:.5;text-decoration:none}.sc_tabs.sc_tabs_style_2 .sc_tabs_titles li.sc_tabs_active a,.sc_tabs.sc_tabs_style_2 .sc_tabs_titles li.ui-state-active a{border-color:#7e481c}.sc_tabs.sc_tabs_style_2 .sc_tabs_titles li a:hover{border-color:#7e481c;color:#7e481c}
     </style>
 </head>
 

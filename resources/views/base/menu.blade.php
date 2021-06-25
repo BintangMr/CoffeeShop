@@ -242,31 +242,6 @@
 
 @push('js')
     <script>
-        jQuery(document).ready(function (){
-            var btnThumbnail = jQuery('#btnThumbnail')
-            var btnList = jQuery('#btnList')
-
-            var menuHandler = jQuery('#mennuHandler');
-
-            jQuery('.description').each(function(i, obj) {
-                jQuery(this).hide()
-            });
-
-            btnThumbnail.click(function (e){
-                e.preventDefault();
-                menuHandler.removeClass('shop_mode_list').addClass('shop_mode_thumbs')
-                jQuery('.description').each(function(i, obj) {
-                    jQuery(this).hide()
-                });
-            })
-
-            btnList.click(function (e){
-                e.preventDefault();
-                menuHandler.removeClass('shop_mode_thumbs').addClass('shop_mode_list')
-                jQuery('.description').each(function(i, obj) {
-                    jQuery(this).show()
-                });
-            })
-        })
+        jQuery(document).ready(function(){var e=jQuery("#btnThumbnail"),n=jQuery("#btnList"),s=jQuery("#mennuHandler");jQuery(".description").each(function(e,n){jQuery(this).hide()}),e.click(function(e){e.preventDefault(),s.removeClass("shop_mode_list").addClass("shop_mode_thumbs"),jQuery(".description").each(function(e,n){jQuery(this).hide()})}),n.click(function(e){e.preventDefault(),s.removeClass("shop_mode_thumbs").addClass("shop_mode_list"),jQuery(".description").each(function(e,n){jQuery(this).show()})})});
     </script>
 @endpush

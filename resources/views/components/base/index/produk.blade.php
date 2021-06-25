@@ -47,12 +47,6 @@
 
 @push('css')
     <style>
-        .produk-title {
-            font-family: Droid Serif !important;
-        }
-
-        .sc_services_style_services-3 .sc_services_item:hover .sc_services_item_title a, .sc_services_style_services-3 .sc_services_item_title a:hover{
-            color: #DAA520FF;
-        }
+       .produk-title{font-family:Droid Serif!important}.sc_services_style_services-3 .sc_services_item:hover .sc_services_item_title a,.sc_services_style_services-3 .sc_services_item_title a:hover{color:#daa520FF}
     </style>
 @endpush

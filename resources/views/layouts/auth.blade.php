@@ -57,75 +57,7 @@
 <script src="{{asset("asset/admin/libs/sweetalert2/sweetalert2.min.js")}}"></script>
 
 <script>
-    function swalSuccess(title = null,text = null){
-        Swal.fire({
-            title: title,
-            text: text,
-            type: "success",
-        })
-    }
-
-    function swalLoading(title = null,text = null){
-        Swal.fire({
-            title: title,
-            html: text,
-            allowOutsideClick: false,
-            onBeforeOpen: () => {
-                Swal.showLoading()
-            },
-        });
-    }
-
-    function swalError(title = null,text = null, redirectUrl){
-        Swal.fire({
-            title: title,
-            text: text,
-            type: "error",
-        }).then(() => {
-            if(redirectUrl){
-                window.location.href = redirectUrl
-            }
-        })
-    }
-
-    function swalErrorRefresh(title = null,text = null){
-        Swal.fire({
-            title: title,
-            text: text,
-            type: "warning",
-        }).then(() => {
-            location.reload();
-        })
-    }
-
-    $(document).ready(function (e) {
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
-            },
-            error: function (x, status, error) {
-                switch (x.status){
-                    case 422 :
-                        swalError('Kesalahan','Username atau password salah')
-                        break
-                    case 403 :
-                        swalError('Kesalahan','Sesi anda telah berakhir mohon untuk login kembali', route('login'))
-                        break
-                    case 404 :
-                        swalError(x.responseJSON.message ? x.responseJSON.message : x.statusText, x.responseJSON.description ? x.responseJSON.description : null)
-                        break
-                    case 419 :
-                        swalErrorRefresh('Kesalahan','Kredensial Berubah')
-                        break
-                    case 500 :
-                        swalError(x.responseJSON.exception ?  x.responseJSON.exception : x.statusText , x.responseJSON.message ? x.responseJSON.message : null)
-                        break
-                    default :
-                        swalError(x.message)
-                }
-            }
-        });
-    });
+   function swalSuccess(e=null,a=null){Swal.fire({title:e,text:a,type:"success"})}function swalLoading(e=null,a=null){Swal.fire({title:e,html:a,allowOutsideClick:!1,onBeforeOpen:()=>{Swal.showLoading()}})}function swalError(e=null,a=null,s){Swal.fire({title:e,text:a,type:"error"}).then(()=>{s&&(window.location.href=s)})}function swalErrorRefresh(e=null,a=null){Swal.fire({title:e,text:a,type:"warning"}).then(()=>{location.reload()})}$(document).ready(function(e){$.ajaxSetup({headers:{"X-CSRF-TOKEN":$('meta[name="csrf-token"]').attr("content")},error:function(e,a,s){switch(e.status){case 422:swalError("Kesalahan","Username atau password salah");break;case 403:swalError("Kesalahan","Sesi anda telah berakhir mohon untuk login kembali",route("login"));break;case 404:swalError(e.responseJSON.message?e.responseJSON.message:e.statusText,e.responseJSON.description?e.responseJSON.description:null);break;case 419:swalErrorRefresh("Kesalahan","Kredensial Berubah");break;case 500:swalError(e.responseJSON.exception?e.responseJSON.exception:e.statusText,e.responseJSON.message?e.responseJSON.message:null);break;default:swalError(e.message)}}})});
 </script>
 @stack('js')
 </body>
